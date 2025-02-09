@@ -23,7 +23,7 @@ library(tidyr)
 library(dplyr)
 
 # Cargar los datos
-data <- read.csv("/home/fredo/FC2516/data/top10s.csv")
+data <- read.csv("/home/path/FC2516/data/top10s.csv")
 
 ```
 
@@ -41,6 +41,14 @@ Top Spotify Songs 2010-2019
 
 data %>% dplyr::count(artist) %>% arrange(desc(n)) %>% head()
 
+ artist  n
+1    Katy Perry 17
+2 Justin Bieber 16
+3      Maroon 5 15
+4       Rihanna 15
+5     Lady Gaga 14
+6    Bruno Mars 13
+
 ```
 
 ## Estilos con más éxitos
@@ -48,6 +56,14 @@ data %>% dplyr::count(artist) %>% arrange(desc(n)) %>% head()
 ```{r top_genres}
 
 data %>% dplyr::count(top.genre) %>% arrange(desc(n)) %>% head()
+
+top.genre   n
+1     dance pop 327
+2           pop  60
+3  canadian pop  34
+4 barbadian pop  15
+5      boy band  15
+6    electropop  13
 
 ```
 
